@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 // ROUTES
 app.get("/",(req,res)=>{
-    res.send("Welcome to an Awesome App about Breads")
+    res.send("Welcome to an  App about Breads")
 });
 // EXTERNAL ROUTES
 const breadController=require("./controller/bread");
