@@ -6,7 +6,7 @@ function ShowView({bread}) {
              
             <Default title="show Details">
                   <h2>Show Details page {bread.name} bread</h2>
-                 
+                 <a href="/breads">Back Home</a>
                   <p>
                         and it 
                         {
@@ -21,7 +21,8 @@ function ShowView({bread}) {
                   have gluten
                   
                   </p>  
-                    <img src={bread.image} alt="Bread Image" />   
+                  <img src={bread.image} alt="Bread Image" /> 
+                  
             
             </Default>
        )

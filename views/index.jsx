@@ -4,7 +4,7 @@ const Default = require('./layouts/default')
 function Index ({breads}) {
     return (
       <Default>
-        <h2>hello johnatan</h2>
+        
         <ul>
           {
             breads.map((bread, index) => {

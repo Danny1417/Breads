@@ -5,9 +5,12 @@ function Default(html) {
     <html>
       <head>
         <title>Default</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+        <link rel="stylesheet" href="/main.css" />
       </head>
       <body>
-        <h1>HTML Rendered!</h1>
+        <h1>Bread Choices</h1>
                     
                           {html.children}
         
