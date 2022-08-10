@@ -1,12 +1,29 @@
-const REact = require("react");
-const DefaultLayout = require("./layouts/default");
+const React = require("react");
+const Default = require("./layouts/default");
 
-function showView({bread}) {
+function ShowView({bread}) {
       return (
              
-            <DefaultLayout title="show Details">
-                  <h2>Show Details page</h2>
-            </DefaultLayout>
+            <Default title="show Details">
+                  <h2>Show Details page {bread.name} bread</h2>
+                 
+                  <p>
+                        and it 
+                        {
+                              bread.hasGluten
+                              ?
+                                    
+                                    <span> does </span>
+                                    :<span> does not </span>
+                        
+                                    
+                        }
+                  have gluten
+                  
+                  </p>  
+                    <img src={bread.image} alt="Bread Image" />   
+            
+            </Default>
        )
 }
- module.exports = showView
+ module.exports = ShowView

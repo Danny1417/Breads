@@ -1,8 +1,11 @@
-const Router  = require("express").Router();
-const Bread = require("../models/bread")
+const express = require("express");
+const Router= express.Router()
+const Bread = require("../models/bread");
+
 
 // INDEX
 Router.get("/", (req, res) => {
+  // renders a view
   res.render("index", {
     breads: Bread,
     title: "Index Page"
@@ -11,8 +14,11 @@ Router.get("/", (req, res) => {
 });
 // SHOW
 Router.get('/:arrayIndex', (req, res) => {
-  const arrayIndex = req.params.arrayIndex
-    // res.send(Bread[arrayIndex])
+  const index = req.params.arrayIndex
+  // renders the raw data"JSON"
+    // res.send(Bread[index])
+  console.log("get request to /:arrayIndex",Bread[index])
+  
   res.render("show", {
     bread:Bread[index],
   })
