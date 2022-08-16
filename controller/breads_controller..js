@@ -14,9 +14,14 @@ Router.get("/", (req, res) => {
 });
 // show
 Router.get("/:arrayIndex", (req, res) => {
-      res.render("Show", {
-            bread: Bread[req.params.arrayIndex]
+      if(Bread[req.params.arrayIndex]){
+res.render("Show", {
+            bread:Bread[req.params.arrayIndex]
       })
+      }else{
+            res.render("404")
+      }
+      
 })
 
 
