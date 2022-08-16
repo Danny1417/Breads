@@ -5,7 +5,7 @@ const Bread = require("../models/bread");
 
 // index
 Router.get("/", (req, res) => {
-      res.render(Index,
+      res.render("Index",
             {
                   breads: Bread,
                   title: "Index Page"
@@ -14,7 +14,9 @@ Router.get("/", (req, res) => {
 });
 // show
 Router.get("/:arrayIndex", (req, res) => {
-      res.send(Bread[req.params.arrayIndex])
+      res.render("Show", {
+            bread: Bread[req.params.arrayIndex]
+      })
 })
 
 
