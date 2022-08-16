@@ -22,7 +22,27 @@ res.render("Show", {
             res.render("404")
       }
       
-})
+});
+
+
+// NEW
+Router.get('/new', (req, res) => {
+      res.render('new')
+  })
+  
+// CREATE
+Router.post('/', (req, res) => {
+      console.log(req.body)
+      if(req.body.hasGluten === 'on') {
+        req.body.hasGluten = 'true'
+      } else {
+        req.body.hasGluten = 'false'
+      }
+      Bread.push(req.body)
+      res.redirect('/breads')
+    })
+    
+    
 
 
 module.exports = Router
