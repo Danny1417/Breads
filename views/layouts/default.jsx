@@ -3,7 +3,7 @@ const React = require("react");
 
 function Default(html) {
       return (
-            <html>
+            < html>
                   <head>
                         <title>{html.title || "Default"}</title>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" integrity="sha512-Ojqt7YpXqYM6//AdMhErV3ot38rYgGF5QLJEwx7zhesjL9VqfhWiRz/dWK22hsn96RNz0CLl85+pg1P0BmfgVQ==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
