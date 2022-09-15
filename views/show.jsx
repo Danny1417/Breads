@@ -18,12 +18,16 @@ function Show({ bread, index }) {
                         have gluten.
                   </p>
                   <img src={bread.image} alt={bread.name} />
-
+                  <a href={`/breads/${index}/Edit`}>
+                        <button>Edit</button>
+                  </a>
+<div>
                   <form action={`/breads/${index} ?_method=DELETE`} method="POST">
                         
 <input type="submit" value="DELETE" />
 
-                  </form>
+                        </form>
+                        </div>
                   
                   <div className="backButton">
   <a href="/breads"><button>Go back to the index</button></a>
