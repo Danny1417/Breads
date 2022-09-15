@@ -1,11 +1,13 @@
 // dependencies
 const express = require("express");
+const methodOverride = require("method-override");
 // configuration
 require("dotenv").config();
 const PORT = process.env.PORT;
 const app = express();
 
 // middleware
+app.use(methodOverride("_method"));
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());

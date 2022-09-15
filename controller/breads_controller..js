@@ -12,7 +12,7 @@ Router.get("/", (req, res) => {
       }
       )
 });
-// NEW
+//GET INFO FROM  NEW.JSX
 Router.get('/new', (req, res) => {
       res.render('new')
   })
@@ -20,7 +20,8 @@ Router.get('/new', (req, res) => {
 Router.get("/:arrayIndex", (req, res) => {
       if(Bread[req.params.arrayIndex]){
 res.render("Show", {
-            bread:Bread[req.params.arrayIndex]
+      bread: Bread[req.params.arrayIndex],
+      index: req.params.arrayIndex,
       })
       }else{
             res.render("404")
@@ -38,7 +39,13 @@ Router.post('/', (req, res) => {
       }
       Bread.push(req.body)
       res.redirect('/breads')
-    })
+})
+//   DELETE FORM
+Router.delete("/:arrayIndex", (req, res) => {
+      Bread.splice(req.params.arrayIndex, 1);
+      res.status(303).redirect("/breads");
+})
+
     
     
     
